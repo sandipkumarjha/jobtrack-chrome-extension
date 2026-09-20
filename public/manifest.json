@@ -8,7 +8,8 @@
     "default_title": "JobTrack"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "icons": {}
 }
