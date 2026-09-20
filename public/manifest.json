@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "JobTrack",
+  "version": "1.0.0",
+  "description": "Track and manage job applications directly from your browser.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "JobTrack"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {}
+}
