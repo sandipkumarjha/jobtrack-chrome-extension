@@ -1,75 +1,96 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 JobTrack — Chrome Extension
 
-Currently, two official plugins are available:
+JobTrack is a Chrome extension that helps users save, manage, and track job applications directly from their browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- Add and save job applications
+- Capture the current webpage URL and title
+- Track application status
+- Edit and delete applications
+- Search and filter jobs
+- Track application statistics
+- Interview progress bar
+- Add application dates and notes
+- Export applications as CSV
+- Persistent storage using Chrome Storage API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- Chrome Extension Manifest V3
+- Chrome Storage API
+- CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+jobtrack-chrome-extension/
+├── public/
+│   └── manifest.json
+├── src/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Installation and Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the repository
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd jobtrack-chrome-extension
 ```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Build the extension
+
+```bash
+npm run build
+```
+
+### 4. Load into Chrome
+
+1. Open `chrome://extensions`
+2. Enable **Developer mode**
+3. Click **Load unpacked**
+4. Select the `dist` folder
+5. Open the JobTrack extension
+
+## 🧠 What I Learned
+
+- Building Chrome extensions using Manifest V3
+- Managing React state with TypeScript
+- Persisting data using Chrome Storage API
+- Implementing CRUD operations
+- Creating search and filtering functionality
+- Exporting application data as CSV
+- Building and testing browser extensions
+
+## 🔮 Future Improvements
+
+- Automatic company name extraction
+- Application reminders
+- Cloud synchronization
+- Authentication
+- Analytics dashboard
+- Job description parsing
+- AI-powered job tracking insights
+
+## 👨‍💻 Author
+
+Sandip Kumar Jha
